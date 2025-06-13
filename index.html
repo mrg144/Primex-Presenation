@@ -445,30 +445,46 @@
             font-size: 1.1rem;
         }
 
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-            }
-            
-            .logo {
-                width: 80px;
-            }
-            
-            .header-text h1 {
-                font-size: 2rem;
-            }
-            
-            .profile {
-                flex-direction: column;
-            }
-            
-            .profile-text {
-                text-align: center;
-            }
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;  /* Logo oben, Text unten */
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
-            .future-comparison {
-                grid-template-columns: 1fr;
-            }
+    .logo {
+        width: 200px;  /* Logo kleiner auf Handy */
+    }
+
+    .header-text h1 {
+        font-size: 2rem;  /* Text kleiner */
+        text-align: center;
+    }
+
+    .header-text .subtitle {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .qr-code {
+        width: 150px;  /* QR Code kleiner */
+        height: 150px;
+    }
+
+    .profile {
+        flex-direction: column;  /* falls dein Profile Block nebeneinander steht */
+    }
+
+    .profile-text {
+        text-align: center;
+    }
+
+    .future-comparison {
+        grid-template-columns: 1fr; /* nur eine Spalte auf Handy */
+    }
         }
     </style>
 </head>
